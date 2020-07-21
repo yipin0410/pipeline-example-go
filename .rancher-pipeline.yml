@@ -7,6 +7,7 @@ stages:
       answers:
         hmVersion: 20.6.0.18
         imagePullSecrets: gcr-pull
+        tag: 20.6.0.18
       name: nginx-static
       targetNamespace: default
 notification: {}
