@@ -6,10 +6,10 @@ stages:
       version: 3.1.0
       answers:
         hmVersion: 20.6.0.18
+        image.registry: gcr.io
+        image.repository: /xcloudiq/hm-webapp-frontend
+        image.tag: 20.6.0.18
         imagePullSecrets: gcr-pull
-        registry: gcr.io
-        repository: /xcloudiq/hm-webapp-frontend
-        tag: 20.6.0.18
       name: nginx-static
       targetNamespace: default
 notification: {}
