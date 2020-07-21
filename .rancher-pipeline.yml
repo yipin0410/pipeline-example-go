@@ -2,11 +2,8 @@ stages:
 - name: deploy catalog app
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:test-nginx-frontend
-      version: 3.1.0
-      answers:
-        imagePullSecrets: gcr-pull
-        replicaCount: "1"
-      name: nginx-frontend
+      catalogTemplate: cattle-global-data:helm3-library-mariadb
+      version: 7.3.14
+      name: mariadb
       targetNamespace: default
 notification: {}
