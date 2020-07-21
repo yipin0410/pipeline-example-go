@@ -5,10 +5,11 @@ stages:
       catalogTemplate: cattle-global-data:test-nginx-static
       version: 3.1.0
       answers:
+        hmVersion: 20.6.0.18
+        imagePullSecrets: gcr-pull
         nginx.image.registry: gcr.io
         nginx.image.repository: /xcloudiq/hm-webapp-frontend
         nginx.image.tag: 20.6.0.18
-        imagePullSecrets: gcr-pull
       name: nginx-static
       targetNamespace: default
 notification: {}
