@@ -2,11 +2,11 @@ stages:
 - name: deploy catalog app
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:test-nginx-static
+      catalogTemplate: cattle-global-data:test-nginx-frontend
       version: 3.1.0
       answers:
         imagePullSecrets: gcr-pull
         replicaCount: "1"
-      name: nginx-static
+      name: nginx-frontend
       targetNamespace: default
 notification: {}
