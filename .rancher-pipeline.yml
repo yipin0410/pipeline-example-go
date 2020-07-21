@@ -5,6 +5,7 @@ stages:
       catalogTemplate: cattle-global-data:test-nginx-static
       version: 3.1.0
       answers:
+        imagePullSecrets: gcr-pull
         replicaCount: "1"
       name: nginx-static
       targetNamespace: default
