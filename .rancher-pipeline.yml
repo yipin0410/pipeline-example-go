@@ -1,13 +1,16 @@
 stages:
-- name: Deploy
-  steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
 - name: deploy catalog app
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:helm3-library-mariadb
       version: 7.3.14
       name: mariadb
+      targetNamespace: default
+- name: helm3-nginx
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:xiq-chart-nginx-static
+      version: 3.1.0
+      name: nginx-static
       targetNamespace: default
 notification: {}
