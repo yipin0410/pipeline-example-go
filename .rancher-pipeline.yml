@@ -6,7 +6,7 @@ stages:
       version: 3.1.0
       answers:
         global.hmVersion: 20.6.0.18
-        imagePullSecrets: gcr-pull
+        global.imagePullSecrets: gcr-pull
         nginx.image.registry: gcr.io/prod-hm
         nginx.image.repository: /xcloudiq/hm-webapp-frontend
       name: nginx-static
