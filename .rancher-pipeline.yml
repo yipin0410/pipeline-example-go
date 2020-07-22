@@ -2,7 +2,7 @@ stages:
 - name: deploy catalog app
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:xiq-nginx-static
+      catalogTemplate: cattle-global-data:xiq-chart-nginx-static
       version: 3.1.0
       answers:
         global.hmVersion: 20.6.0.18
@@ -10,5 +10,5 @@ stages:
         nginx.image.registry: gcr.io/prod-hm
         nginx.image.repository: /xcloudiq/hm-webapp-frontend
       name: nginx-static
-      targetNamespace: xca
+      targetNamespace: default
 notification: {}
