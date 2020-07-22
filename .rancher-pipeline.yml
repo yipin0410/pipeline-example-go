@@ -1,11 +1,4 @@
 stages:
-- name: deploy catalog app
-  steps:
-  - applyAppConfig:
-      catalogTemplate: cattle-global-data:helm3-library-mariadb
-      version: 7.3.14
-      name: mariadb
-      targetNamespace: default
 - name: helm3-nginx
   steps:
   - applyAppConfig:
