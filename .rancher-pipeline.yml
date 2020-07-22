@@ -10,5 +10,5 @@ stages:
         nginx.image.registry: gcr.io/prod-hm
         nginx.image.repository: /xcloudiq/hm-webapp-frontend
       name: nginx-static
-      targetNamespace: default
+      targetNamespace: xca
 notification: {}
